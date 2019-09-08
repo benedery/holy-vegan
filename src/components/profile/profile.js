@@ -13,10 +13,13 @@ import Favor from './favor';
 import UserProfile from './userProfile';
 import JoinAsCooker from "../JoinAsCooker";
 import BusinessDetails from "./cookProfile/BusinessDetails";
+import OrdersToMake from "./cookProfile/OrdersToMake";
+import BusinessPage from "./cookProfile/BusinessPage";
+import MyRecipes from "./cookProfile/MyRecipes";
 
 const Profile = ({auth, profile, signOut, history}) => {
-    const [category, setCategory] = useState('cooker');
-    const [categoryName, setCategoryName] = useState('פרופיל משתמש');
+    const [category, setCategory] = useState('favor');
+    const [categoryName, setCategoryName] = useState('מתכונים מועדפים');
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -191,9 +194,9 @@ const Profile = ({auth, profile, signOut, history}) => {
                         {category === 'cooker' && <JoinAsCooker profile={profile} auth={auth}/>}
                         {category === 'user' && <UserProfile profile={profile} handleSignOut={handleSignOut}/>}
                         {category === 'businessDetails' && <BusinessDetails />}
-                        {category === 'ordersToMake' && <UserProfile />}
-                        {category === 'businessPage' && <UserProfile />}
-                        {category === 'myRecipes' && <UserProfile />}
+                        {category === 'ordersToMake' && <OrdersToMake />}
+                        {category === 'businessPage' && <BusinessPage />}
+                        {category === 'myRecipes' && <MyRecipes />}
 
                         {auth.uid === '031mY4FYP9gIo8UVjsiUkQXTO6H2' && <div>
                             {category === 'add' && <AddItems/>}
