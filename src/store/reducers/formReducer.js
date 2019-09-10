@@ -6,11 +6,27 @@ const initState = {
 
 const formReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'SIGNUP_ERROR':
+        case 'FORM_START_LOADING':
             return {
                 ...state,
-                authError: action.err.message
+                loading: true
             };
+        case 'FORM_STOP_LOADING':
+            return {
+                ...state,
+                loading: false
+            };
+        case 'FORM_SENT_SUCCESS':
+            return {
+                ...state,
+                isFormSent:true,
+                formSentError:null,
+            }
+        case 'FORM_SENT_ERROR':
+            return {
+                ...state,
+                formSentError:action.payload
+            }
         default:
             return state;
     }
