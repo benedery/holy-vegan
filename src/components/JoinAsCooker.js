@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {connect} from "react-redux";
 import {sendForm} from '../store/actions/formActions'
-import firebase from "../config/fbConfig";
+import firebase, {storage} from "../config/fbConfig";
+import PictureUpload from "./PictureUpload";
+
 
 const db = firebase.firestore().collection('users');
 
@@ -11,6 +13,8 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
     const [city, setCity]= useState('');
     const [phone, setPhone] = useState('');
     const [aboutMe, setAboutMe] = useState('');
+    const [picture,setPicture] = useState('')
+    const [pictureUrl,setPictureUrl] = useState('')
     const [openingDays, setOpeningDays] = useState({
         day1:false,
         day2:false,
@@ -24,6 +28,7 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
     const days = [{ id: 'day1',name:'ראשון'},{ id: 'day2',name:'שני'},{ id: 'day3',name:'שלישי'},
         { id: 'day4',name:'רביעי'},{ id: 'day5',name:'חמישי'},{ id: 'day6',name:'שישי'}];
     const hours = ['8:00', '9:00','10:00','11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'];
+
 
     let formSent = false;
 
@@ -48,7 +53,7 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
                 }
             }
             console.log(data)
-            sendForm(auth, data)
+            sendForm(auth, data,picture)
         } else {
             e.preventDefault()
             console.log("allready sent data")
@@ -74,6 +79,23 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
     const hoursDisplayed = hours.map(hour => (
         <option value={hour} key={hour}>{hour}</option>
     ))
+
+    // handle picture display
+    const displayPicture = (e) => {
+        let reader = new FileReader();
+        let file = e.target.files[0]
+        reader.onloadend = ()=> {
+            setPicture(file)
+            setPictureUrl(reader.result)
+        }
+        if (file){
+            reader.readAsDataURL(file);
+        }
+    };
+
+    // const sendPicture = ()=> {
+    //     storage.child(`cooker/cookerBusinessImages/${new Date().getTime()}`).put(picture).then(console.log)
+    // }
 
     return (
         <div className="row">
@@ -130,6 +152,7 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
                         </input>
                     </div>
                         <label>תמונה</label>
+                            <PictureUpload displayPicture={displayPicture} picture={picture} pictureUrl={pictureUrl}/>
                         {/*<div className="input-group">*/}
                         {/*    <div className="custom-file">*/}
                         {/*        <input type="file" className="custom-file-input" id="cookerPicFile"></input>*/}
@@ -173,7 +196,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        sendForm : (auth,data)=> dispatch(sendForm(auth,data))
+        sendForm : (auth,data,picture)=> dispatch(sendForm(auth,data,picture))
     };
 };
 
