@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a187cca-9a47-4d2c-b7e7-fd548b96247d" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/components/JoinAsCooker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JoinAsCooker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PictureUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PictureUpload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/formActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/formActions.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/components/profile/cookProfile/BusinessPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/cookProfile/MyRecipes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/cookProfile/OrdersToMake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/cookProfile/BusinessDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/cookProfile/BusinessDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/profile.js" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +21,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -118,6 +128,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> master
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -141,6 +153,7 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -247,10 +260,16 @@
       </pane>
     </panes>
   </component>
+=======
+  <component name="ProjectId" id="1QNP2W8peuAuO7ctr0pNV2W6yRe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>> master
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../module2-exercises/task_manager_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -293,6 +312,7 @@
       <workItem from="1565446080669" duration="20861000" />
       <workItem from="1565706832745" duration="1065000" />
       <workItem from="1565768131739" duration="1269000" />
+<<<<<<< HEAD
       <workItem from="1568072675098" duration="12156000" />
     </task>
     <servers />
@@ -711,5 +731,28 @@
         </state>
       </provider>
     </entry>
+=======
+      <workItem from="1567607879833" duration="41000" />
+      <workItem from="1567960604084" duration="4625000" />
+      <workItem from="1567967233041" duration="1626000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> master
   </component>
 </project>
