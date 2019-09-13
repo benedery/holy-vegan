@@ -23,19 +23,3 @@ export const sendForm = (auth,data,picture) => {
             dispatch({type:'FORM_STOP_LOADING'});
         })
     }};
-
-
-
-
-
-//         ).then((res) => {
-//             return firestore.collection('users').doc(res.user.uid).set({
-//                 userName: newUser.userName,
-//                 email: newUser.email
-//             });
-//         }).catch((err) => {
-//             dispatch({type: 'SIGNUP_ERROR', err});
-//             dispatch({type: 'STOP_LOADING'});
-//         });
-//     };
-// };

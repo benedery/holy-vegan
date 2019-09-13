@@ -4,7 +4,6 @@ import {sendForm} from '../store/actions/formActions'
 import firebase, {storage} from "../config/fbConfig";
 import PictureUpload from "./PictureUpload";
 
-
 const db = firebase.firestore().collection('users');
 
 const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
@@ -93,10 +92,6 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
         }
     };
 
-    // const sendPicture = ()=> {
-    //     storage.child(`cooker/cookerBusinessImages/${new Date().getTime()}`).put(picture).then(console.log)
-    // }
-
     return (
         <div className="row">
             <div className="col-12 p-lg-5">
@@ -153,16 +148,6 @@ const JoinAsCooker = ({profile,auth, sendForm, loading}) => {
                     </div>
                         <label>תמונה</label>
                             <PictureUpload displayPicture={displayPicture} picture={picture} pictureUrl={pictureUrl}/>
-                        {/*<div className="input-group">*/}
-                        {/*    <div className="custom-file">*/}
-                        {/*        <input type="file" className="custom-file-input" id="cookerPicFile"></input>*/}
-                        {/*            <label className="custom-file-label" htmlFor="cookerPicFile"*/}
-                        {/*                   aria-describedby="inputGroupFileAddon02"></label>*/}
-                        {/*    </div>*/}
-                        {/*    <div className="input-group-append">*/}
-                        {/*        <span className="input-group-text" id="cookerPicFile">העלאה</span>*/}
-                        {/*    </div>*/}
-                        {/*    </div>*/}
                             <div className="form-group mt-4">
                                 <label htmlFor="cookerAboutMe-textarea"> על המטבח שלי</label>
                                 <textarea className="form-control" id="cookerAboutMe-textarea" rows="4"
@@ -208,9 +193,10 @@ export default connect(mapStateToProps, mapDispatchToProps)(JoinAsCooker);
 // check if need to use redux and reducer for form sent opreation. if yes, build it. V
 //if form sent show message and change button to "עדכן" V
 
-//add image opeartion to data sent.
-//show little image if possible after image uploaded.
+//add image opeartion to data sent. v
+//show little image if possible after image uploaded. v
 
 //later on fetch data to show if allready form sent
-// 1. format code, include map and reducing size, code NOT DRY.
+// 1. format code, include map and reducing size, code NOT DRY. V
+
 //validation of the form
