@@ -157,6 +157,8 @@
     }
   }
 
+
+
   .recipe {
     margin-bottom: 170px;
     // Large devices (desktops, 992px and up)
@@ -259,5 +261,33 @@
 
   .btn-empty {
     width: 200px;
+  }
+}
+
+#recipe-order-btn {
+  display: block;
+  border-radius: 3px;
+  padding: 3px 12px;
+  width: 40vw;
+  cursor: pointer;
+}
+
+.recipe-order-cookers {
+  margin-top:10px;
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+    background-color: #0ea432;
+    color: white;
   }
 }

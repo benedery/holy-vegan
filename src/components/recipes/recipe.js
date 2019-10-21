@@ -28,9 +28,11 @@ const Recipe = ({recipe, match, auth, items, addToCart, history, otherRecipes}) 
     const [showAddToCartModal, setShowAddToCartModal] = useState(false);
     const [modalItem, setModalItem] = useState(null);
     const [replaceItem, setReplaceItem] = useState(null);
+    const [showOrderRecipe, setShowOrderRecipe] = useState(false)
 
     const myElement = document.getElementById('scrollDiv');   /* col-lg-10 */
 
+    const toggleOrderRecipe = () => setShowOrderRecipe(!showOrderRecipe);
     const handleClose = () => setShow(false);
     const handleCloseAddToCart = () => setShowAddToCartModal(false);
     const handleShow = () => setShow(true);
@@ -521,6 +523,25 @@ const Recipe = ({recipe, match, auth, items, addToCart, history, otherRecipes}) 
                         </Modal.Footer>
                     </Modal>
 
+                    <div className="oreder_recipe">
+                    <div className="recipe-order_recipe">
+                    <button id="recipe-order-btn" className="btn-success" onClick={toggleOrderRecipe}> הזמן מתכון זה</button>
+                    </div>
+
+                        {showOrderRecipe &&
+                        <div className="recipe-order-cookers">
+                            <table>
+                                <tr className="font-weight-bold">
+                                    <td>שם הבשלן</td>
+                                    <td>מחיר</td>
+                                    <td>
+                                        <button>הזמן</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        }
+                    </div>
 
                     <div className="col-12 text-dark mt-3 mt-md-4 insta-follow">
                         <a href="https://www.instagram.com/holy_vegan_il/" target="_blank" rel="noopener noreferrer">
